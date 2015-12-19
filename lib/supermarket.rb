@@ -29,11 +29,26 @@ class Cart
 	end
 end
 
+class ItemDatabase
+
+	def initialize
+		@hash = {}
+	end
+
+    def add(item)
+      @hash[item.name] = item
+      
+    end
+
+    def find(name)
+    	@hash[name]
+    end
+
+end
+
+
+
 #item = Item.new()
 #item.name
 #item.price
-cart = Cart.new
-cart.add(Item.new("banana",50))
-cart.add(Item.new("apple",100))
-cart.total
 
